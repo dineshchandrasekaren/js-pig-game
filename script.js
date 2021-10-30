@@ -3,6 +3,8 @@
 const diceBtn = document.querySelector(`.btn--roll`);
 const newBtn = document.querySelector(`.btn--new`);
 const holdBtn = document.querySelector(`.btn--hold`);
+const getBtn = document.querySelector(`.btn--get`);
+const scr = document.querySelector(`.window`);
 
 const dice = document.querySelector(`.dice`);
 
@@ -12,6 +14,7 @@ const init = function () {
     dice.classList.add('hidden');
     playing = true;
     score = [0, 0];
+    getBtn.classList.add('hidden');
     for (let i = 0; i < score.length; i++) {
         score[i] = 0;
         document.getElementById(`score--${i}`).textContent = 0;
@@ -52,7 +55,7 @@ holdBtn.addEventListener('click', () => {
     }
 });
 
-newBtn.addEventListener('click',init);
+newBtn.addEventListener('click', init);
 
 // To toggle (means opposite reaction eg: (added ? remove: adding)) the classNames
 function togglePlayers() {
@@ -73,3 +76,17 @@ function generatingNumber() {
     return Math.trunc(Math.random() * 6) + 1;
 }
 
+var wid = window.matchMedia("(max-width: 452px)")
+
+function myFunction(wid) {
+    if (wid.matches) {
+        scr.classList.add('hidden');
+        getBtn.classList.remove('hidden');
+    } else {
+        scr.classList.remove('hidden');
+        getBtn.classList.add('hidden');
+    }
+}
+
+myFunction(wid) // Call listener function at run time
+wid.addListener(myFunction)
