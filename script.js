@@ -82,9 +82,11 @@ function myFunction(wid) {
     if (wid.matches) {
         scr.classList.add('hidden');
         getBtn.classList.remove('hidden');
+
     } else {
         scr.classList.remove('hidden');
         getBtn.classList.add('hidden');
+        scr.style.height = '100vh'
     }
 }
 
