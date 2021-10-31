@@ -184,6 +184,7 @@ main {
   }
   .score {
     font-size: 5rem;
+    margin-top: 2rem;
   }
   .name {
     font-size: 2rem;
