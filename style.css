@@ -183,7 +183,7 @@ main {
     border-radius: 1px;
   }
   .player {
-    margin-top: 4rem;
+    padding-top: 10rem;
   }
   .score {
     font-size: 5rem;
