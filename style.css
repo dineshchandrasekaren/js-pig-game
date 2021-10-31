@@ -184,11 +184,11 @@ main {
   }
   .score {
     font-size: 5rem;
-    margin-top: 40%;
     margin-bottom: 2rem;
   }
   .name {
     font-size: 2rem;
+    margin-top: 4rem;
   }
   .btn {
     font-size: 0.8rem;
