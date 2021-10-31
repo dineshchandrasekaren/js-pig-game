@@ -86,7 +86,6 @@ function myFunction(wid) {
     } else {
         scr.classList.remove('hidden');
         getBtn.classList.add('hidden');
-        scr.style.height = '100vh'
     }
 }
 
